@@ -30,6 +30,10 @@ header .container {
 	margin: 0 auto;
 }
 
+header .search-bar {
+	visibility: hidden;
+}
+
 header .container i {
 	color: #fff;
 	font-size: 12px;
@@ -109,6 +113,31 @@ header .container ul .active{
 
 .logo {
 	margin: -29% 0 10%;
+}
+
+.sidebar ul .active {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	justify-content: space-around;
+	margin: 0;
+}
+
+.menu {
+	display: none;
+}
+
+.menu button {
+	background: none;
+	border: none;
+	outline: none;
+	font-size: 28px;
+	margin: 66%;
+	cursor: pointer;
+}
+
+.menu button i {
+	color: #fff;
 }
 
 /* Content */
@@ -627,6 +656,10 @@ footer img {
 	margin-top: 10px;
 }
 
+footer .phone-and-email {
+	display: none;
+}
+
 /* Media Queries*/
 
 @media (max-width: 992px) {
@@ -657,7 +690,7 @@ footer img {
 	.sidebar {
 		margin-bottom: 2%;
 		flex-direction: row;
-		justify-content: space-around;
+		justify-content: space-between;
 		flex-wrap: wrap;
 	}
 
@@ -674,15 +707,16 @@ footer img {
 	}
 
 	.sidebar .logo {
-		width: 40%;
+		width: 20%;
 		order: 1;
+		margin: 0 auto;
 	}
 
 	.sidebar .phone-and-email {
 		width: 60%;
 		box-sizing: border-box;
 		order: 2;
-		padding: 4%;
+		padding: 4% 0;
 		display: -webkit-flex;
 		display: -moz-flex;
 		display: -ms-flex;
@@ -693,8 +727,7 @@ footer img {
 	}
 
 	.sidebar .phone-and-email div {
-		margin-top: 5%;	
-		margin-right: 5%;
+		margin-bottom: 2%;
 	}
 
 	.tab-panels .big-image-caption {
@@ -707,6 +740,10 @@ footer img {
 	header .container {
 		top: 2%; left: 0;
 		width: 100%;
+	}
+
+	#main {
+		overflow: auto; 
 	}
 
 	.search-bar {
@@ -735,26 +772,57 @@ footer img {
 	}
 
 	.sidebar .phone-and-email {
+		display: none;
+	}
+
+	.sidebar .phone-and-email {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		background: #401C00;
+		opacity: 0.9;
+		z-index: 10;
+		width: 100%;
+		height: 70px;
+		padding: 3%;
+		margin: 0;
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
 		display: flex;
-		flex-direction: column;
-		text-align: right;
+		justify-content: space-around;
+
 	}
 
 	.sidebar .phone-and-email div {
-		text-align: right;
+		text-align: center;
+	}
+
+	footer .phone-and-email {
+		display: flex;
+		visibility: hidden;
+		margin-top: 5%;
 	}
 
 	.sidebar ul {
-		display: flex;
-		flex-direction: column;
-		width: 100%;
-		justify-content: space-around;
-		margin: 0;
+		display: none;
 	}
 
 	.sidebar ul li {
 		text-align: center;
 		border-bottom: 1px solid lightgray;
+	}
+	
+	.menu {
+		display: flex;
+		order: 2;
+		align-items: center;
+		margin: 0% 14%;
+	}
+
+	.sidebar .logo {
+		margin: 1% 6%;
 	}
 
 	.tab-panels .panel h1 {
@@ -819,8 +887,13 @@ footer img {
 	#main {
 		margin-top: -15%;
 	}
+	
+	.sidebar {
+		margin-top: 15%;
+	}
 
-	.sidebar .phone-and-email div {
+	.menu button {
+		font-size: 20px;
 	}
 
 	.tab-panels ul li {

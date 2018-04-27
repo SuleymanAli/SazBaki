@@ -8,4 +8,14 @@ $(document).ready(function(){
 			});
 		})
 	})
+
+	$(".sidebar .menu button").on("click",function(){
+		$(".sidebar ul").slideToggle(".sidebar ul .active");
+	})
+
+	lightbox.option({
+      'maxWidth': 700,
+    })
+
 });
+
